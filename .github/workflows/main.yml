@@ -1,0 +1,140 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Chat application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your name",
+  "license": "ISC"
+}
+npm install --save socket.io
+npm install --save express
+"dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8"
+}
+socket.on('event', function(msg){})
+io.emit('event', 'message')
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+app.get('/', function(req, res){
+  res.sendfile('index.html');
+});
+
+io.on('connection', function(socket){
+  console.log('user connected');
+  socket.on('chat message', function(msg){
+    io.emit('chat message', msg);
+  });
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+});
+
+http.listen(3000, function(){
+  console.log('listening on *:3000');
+});
+<script src="/path/to/angular.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/js/app.js"></script>
+  </head>
+  <body ng-controller="mainController">
+    <ul id="messages"></ul>
+    <div>
+      <input id="m" ng-model="message" autocomplete="off" />
+      <button ng-click="send()">Send</button>
+    </div>
+  </body>
+</html>
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+body { 
+  font: 13px Helvetica, Arial;
+}
+div {
+  background: #000; 
+  padding: 3px; 
+  position: fixed; 
+  bottom: 0; 
+  width: 100%; 
+}
+div input { 
+  border: 0; 
+  padding: 10px; 
+  width: 90%; 
+  margin-right: .5%; 
+}
+div button { 
+  width: 9%; 
+  background: rgb(130, 224, 255); 
+  border: none; 
+  padding: 10px; 
+}
+#messages { 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+#messages li { 
+  padding: 5px 10px; 
+}
+#messages li:nth-child(odd) { 
+  background: #eee; 
+}
+socket.on('event name', function(msg){});
+socket.emit('event name', message);
+var app=angular.module('myApp',[]);
+
+app.controller('mainController',['$scope',function($scope){
+  var socket = io.connect();
+  $scope.send = function(){
+    socket.emit('chat message', $scope.message);
+    $scope.message="";
+  }
+  socket.on('chat message', function(msg){
+    var li=document.createElement("li");
+    li.appendChild(document.createTextNode(msg));
+    document.getElementById("messages").appendChild(li);
+  });
+}]);
+{
+ "_id" : ObjectId("5809171b71e640556be904ef"),
+ "name" : "Monkey proger",
+ "handle" : "mkproger",
+ "password" : "proger228",
+ "phone" : "8888888888",
+ "email" : "dontwritemepleez@gmail.com",
+ "friends" : [
+    {
+      "name" : "habrick",
+      "status" : "Friend"
+    },
+    {
+      "name" : "javaman",
+      "status" : "Friend"
+    }
+ ],
+ "__v" : 0
+}
+app.post('/register', function(req,res){})
+
+app.post('/login', function(req,res){})
+
+app.post('/friend_request', function(req,res){})
+
+app.post('/friend_request/confirmed', function(req,res){})

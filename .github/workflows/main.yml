@@ -87,7 +87,7 @@ div button {
 }
 #messages { 
   list-style-type: none; 
-  margin: 0; 
+  margin: 0;
   padding: 0; 
 }
 #messages li { 
@@ -114,11 +114,11 @@ app.controller('mainController',['$scope',function($scope){
 }]);
 {
  "_id" : ObjectId("5809171b71e640556be904ef"),
- "name" : "Monkey proger",
+ "name" : "Tvister",
  "handle" : "mkproger",
  "password" : "proger228",
  "phone" : "8888888888",
- "email" : "dontwritemepleez@gmail.com",
+ "email" : "vevtin61@gmail.com",
  "friends" : [
     {
       "name" : "habrick",

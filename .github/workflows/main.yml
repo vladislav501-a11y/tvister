@@ -1,12 +1,12 @@
 {
-  "name": "chat",
+  "name": "tvister",
   "version": "1.0.0",
   "description": "Chat application",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Your name",
+  "author": "Dalboebi LLC",
   "license": "ISC"
 }
 npm install --save socket.io

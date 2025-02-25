@@ -117,7 +117,7 @@ app.controller('mainController',['$scope',function($scope){
  "name" : "Tvister",
  "handle" : "mkproger",
  "password" : "proger228",
- "phone" : "8888888888",
+ "phone" : "+79964716428",
  "email" : "vevtin61@gmail.com",
  "friends" : [
     {
